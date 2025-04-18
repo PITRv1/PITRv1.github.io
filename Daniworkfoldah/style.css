@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "PixelFont";
+    src: url("./HunCompPressStart2P-Regular.ttf");
+}
+
 * {
-    font-family: "Test";
+    font-family: "PixelFont";
     color: white;
     --light-blue: #77b2fc;
     --dark-blue: #064796;
@@ -9,7 +14,7 @@
 body {
     background-color: black;
     background-image: url("./Images/team/undefined_team_logo_with_padding.png");
-    background-size: 150px;
+    background-size: 180px;
     background-repeat: repeat;
     backdrop-filter: blur(3px);
     display: flex;
@@ -33,7 +38,6 @@ body, html {
     padding: 30px;
     gap: 70px;
     max-width: 1500px;
-    overflow: hidden;
 }
 
 #team_container {
@@ -79,11 +83,14 @@ body, html {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
 .card {
-    width: 300px;
-    height: 400px;
+    min-width: 300px;
+    min-height: 400px;
     align-items: center;
     text-align: center;
     background-size: cover;
@@ -108,7 +115,7 @@ p {
     text-align: justify;
 }
 
-@font-face {
-    font-family: "Test";
-    src: url("./HunCompPressStart2P-Regular.ttf");
+h1 {
+    color: var(--light-blue);
+    filter: drop-shadow(0 0 10px var(--light-blue));
 }
