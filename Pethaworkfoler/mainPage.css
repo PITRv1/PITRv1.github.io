@@ -1,0 +1,17 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 150%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
