@@ -15,3 +15,79 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.content{
+    display: flex;
+    justify-content: center;
+
+    background-color: white;
+
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+
+    animation: logo-sway 5s ease infinite alternate;
+}
+
+@keyframes logo-sway {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-52%, -50%) rotate(-.1deg);
+    }
+    100% {
+        transform: translate(-48%, -50%) rotate(0deg);
+    }
+}
+
+.gradient-overlay{
+    margin-top: 600px;
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+    height: 305px;
+
+    
+    background: linear-gradient(to top, rgba(12, 12, 12, 1), rgba(0, 0, 0, 0)) no-repeat;
+    background-size: 100% 305px;
+    background-color: transparent;
+}
+
+.main-content{
+    margin-top: 900px;
+    position: absolute;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(12, 12, 12);
+}
