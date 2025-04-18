@@ -1,0 +1,114 @@
+* {
+    font-family: "Test";
+    color: white;
+    --light-blue: #77b2fc;
+    --dark-blue: #064796;
+    --black: #000000;
+}
+
+body {
+    background-color: black;
+    background-image: url("./Images/team/undefined_team_logo_with_padding.png");
+    background-size: 150px;
+    background-repeat: repeat;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.788);
+    padding: 30px;
+    gap: 70px;
+    max-width: 1500px;
+    overflow: hidden;
+}
+
+#team_container {
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+#team_container p {
+    color: var(--light-blue);
+    filter: drop-shadow(0 0 10px var(--light-blue));
+}
+
+#team_logo {
+    max-width: 90%;
+    filter: drop-shadow(0 0 10px var(--dark-blue));
+}
+
+#team_image {
+    border-radius: 15px;
+    rotate: -7deg;
+    float: left;
+    margin-right: 20px;
+}
+
+.member_icon {
+    float: right;
+    margin-left: 30px;
+    width: 200px;
+}
+
+#member_container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#project_container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+}
+
+#collecthings {
+    background-image: url("./Images/projects/CollecThings/Screenshot\ 2025-04-18\ 161456.png");
+}
+
+p {
+    text-align: justify;
+}
+
+@font-face {
+    font-family: "Test";
+    src: url("./HunCompPressStart2P-Regular.ttf");
+}
