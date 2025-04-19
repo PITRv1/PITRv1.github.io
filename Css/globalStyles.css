@@ -1,11 +1,11 @@
 @font-face {
     font-family: "PixelFont";
-    src: url("/Assets/Fonts/HunCompPressStart2P-Regular.ttf");
+    src: url("../Assets/Fonts/HunCompPressStart2P-Regular.ttf");
 }
 
 @font-face {
     font-family: "WidePixelFont";
-    src: url("/Assets/Fonts/m04.TTF");
+    src: url("../Assets/Fonts/m04.TTF");
 }
 
 * {

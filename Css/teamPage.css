@@ -1,6 +1,6 @@
 @font-face {
     font-family: "PixelFont";
-    src: url("./HunCompPressStart2P-Regular.ttf");
+    src: url("../Assets/Fonts/HunCompPressStart2P-Regular.ttf");
 }
 
 * {
@@ -12,29 +12,30 @@
 }
 
 body {
+    background-color: #000000;
+}
+
+/* body {
     background-color: black;
-    background-image: url("./Images/team/undefined_team_logo_with_padding.png");
-    background-size: 180px;
-    background-repeat: repeat;
-    backdrop-filter: blur(3px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
 }
+*/
 
 body, html {
     padding: 0;
     margin: 0;
-}
+} 
 
 #container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.788);
+    /*background-color: rgba(0, 0, 0, 0.788);*/
     padding: 30px;
     gap: 70px;
     max-width: 1500px;
@@ -108,7 +109,7 @@ body, html {
 }
 
 #collecthings {
-    background-image: url("./Images/projects/CollecThings/Screenshot\ 2025-04-18\ 161456.png");
+    background-image: url("../Assets/Images/projects/CollecThings/Screenshot\ 2025-04-18\ 161456.png");
 }
 
 p {
