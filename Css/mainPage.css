@@ -10,6 +10,9 @@ body {
     box-sizing: border-box;
 }
 
+p{
+    line-height: 25px;
+}
 
 /* This is voodoo. I dont know what is happening here but you can make the scrollbar dissapear. */
 body.noscroll {
@@ -168,6 +171,11 @@ body::-webkit-scrollbar {
 
 .about-game p, .about-game h1{
     text-align: center;
+}
+
+.about-game-content{
+    display: flex;
+    flex-direction: column;
 }
 
 

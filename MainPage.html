@@ -15,7 +15,7 @@
    <div class="container">
        <div class="nav-bar">
             <div class="nav-item">
-                <a href="MainPage.html">
+                <a href="TeamPage.html">
                 <button class="nav-btn">
                     <img src="Assets/SVG/info.svg">
                     TEAM</button>
@@ -53,8 +53,13 @@
                     <div class="section-title">
                         <h1>About The Game</h1>
                     </div>
-                    <div class="section-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <div class="section-content about-game-content">
+                        <p>Please Hold is a simulation game made by the undefined team for the Vadász Dénes informatikai verseny where the player can build and manage their own city. The game provides different game mechanics that come together to create the game expreience as well as multiple quality of life features.
+                        </p>
+                        <h1 style="margin-bottom: 0px;">Story</h1>
+                        <p>
+                            In the game you play as an office worker. While working they call the customer-service of their company but get put on hold. While on hold they get bored and eventually they start playing on their phone. The game they play is a citybuilder game. This is where the real game begins.
+                        </p>
                     </div>
                 </div>
 
@@ -65,20 +70,19 @@
                                 <h2>Game Mechanincs</h2>
                             </button>
                         </div>
-                        
+                        <div class="navigation-card" id="systems-card">
+                            <button onclick="showView('systems-card' ,'systems-content')">
+                                <h2>Systems</h2>
+                            </button>
+                        </div>
                         <div class="navigation-card" id="development-card">
                             <button onclick="showView('development-card' ,'development-content')">
                                 <h2>Development</h2>
                             </button>
                         </div>
-                        <div class="navigation-card" id="walkthrough-card">
-                            <button onclick="showView('walkthrough-card' ,'walkthrough-content')">
-                                <h2>Walkthrough</h2>
-                            </button>
-                        </div>
-                        <div class="navigation-card" id="story-card">
-                            <button onclick="showView('story-card' ,'story-content')">
-                                <h2>Story</h2>
+                        <div class="navigation-card" id="data-card">
+                            <button onclick="showView('data-card' ,'data-content')">
+                                <h2>Data</h2>
                             </button>
                         </div>
                         <div class="navigation-card" id="gallery-card">
@@ -119,9 +123,9 @@
                     </div>
 
 
-                    <div class="changing walkthrough" id="walkthrough-content" style="background-color: red;">
+                    <div class="changing datathrough" id="data-content" style="background-color: red;">
                         <div class="section-title">
-                            <h1>Walkthrough</h1>
+                            <h1>Data</h1>
                         </div>
     
                         <div class="section-content">
@@ -133,9 +137,9 @@
                     </div>
 
 
-                    <div class="changing story" id="story-content" style="background-color: red;">
+                    <div class="changing story" id="systems-content" style="background-color: red;">
                         <div class="section-title">
-                            <h1>Story</h1>
+                            <h1>Systems</h1>
                         </div>
     
                         <div class="section-content">

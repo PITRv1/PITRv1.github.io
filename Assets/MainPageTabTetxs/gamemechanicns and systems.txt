@@ -1,0 +1,65 @@
+The game has 6 main mechanincs
+
+Building construction
+	Buildings can be constructed on empty plots.
+	The player can construct 3 different types of buildings
+		Flat
+		Hospital
+		School
+	The amount of happiness that the population gains depends on which type of building the player places.
+	When starting construction must specify the area of the building as well as the turns (months) it will take to complete the building process.
+The cost of the building depends on the area the building takes up and the calculated amount gets subtracted from the total budget of the city each month.
+Under the surface the construction system uses the project system.
+
+Building repair
+	Buildings may also be repaired. This starts a repair project which may include multiple buildings and can both be started from the HUD of the game and by right-clicking on the building the player wishes to repair. 
+
+Services
+	Through services the player can gain a stable source of funding. They can include multiple buildings similar to the projects. They also have a cost but depending on their value they also yield returns to the city budget each month. The player can set the name and type when creating a service.
+	Services can be ended through the HUD at which point they will stop subtracting from the budget   but wont add to it either.
+
+Random events
+	There are 5 random events in the game one of which gets randomly selected at the start each month. The events can have a variety of effects on the city depending on what gets chosen. The five events are:
+	Fireee : multiple houses are damaged ( the index of the damaged houses is shown ) and the happiness falls by 15%
+	Water pipe disaster : the happiness of the people falls by 5% and player has to use 10000$ of budget to fix the issue
+	City wide famine : the populations happiness decreeses by 15%.
+	Extra government funding : the city gains 100.000$ extra budget
+	Nothing happens : nothing happens
+
+
+Population happiness and Budget balancing
+	Initial happiness and budget amounts can and must be set upon starting the simulation as well as defining a minimum happiness value.
+	As stated above different events and happenings in the area have an effect on the happiness and budget of the city. For specific data refer to the paragraphs above.
+	The happiness value is a range from 0 100% where 0 is the minimum happiness set by the player upon starting the simulation. If the player dips below the specified amount in population happiness or reaches 0$ in city budget before the simulation time period is up the simulation ends early in a game over state.
+
+Simulation end
+	When the simulation ends the statistics are shown to the player. These are the cause of the sim ending, the budget the player finished with the happiness the city was when the simulation finished and the amount of turns they compleated out of the desired amount of rounds.
+	The game can end because of 3 causes:
+		If the player completes the time period set when starting the simulation.
+		The population happiness falling below the minimum happiness.
+		The city running out of budget.
+
+
+Systems
+Projects
+	Projects are the main driving system behind the game. They can include multiple buildings at once. All of the have a name, a type, and a cost as well as a time to complete (months). This system is utilized in multiple areas such as the building and repair game-mechanics.
+
+Save and Load system
+	The game saves the current state of the simulation each turn into a .csv file from which the player can continue a simulation they started earlier without having to restart the whole process. 
+	The load system is able to populate the simulation data such as buildings, their types and specifications. If the player has already started a simulation and the save system has created a save file, through the load system we can enter back into an already started simulation loading the relevant date happiness budget and buildings.
+	A separate load system was created for the players preferences and settings.
+
+Player Settings/Preferences
+	The user may tailor their experience to themselves by changing the settings of the game the settings include the following:
+	Music volume
+	Camera movement sensitivity
+	Camera orbit sensitivity
+	Camera zoom sensitivity
+	This menu can be reached both through the main menu and the pause menu inside the simulation.
+
+Camera system
+	Inside the situation the user can properly look around using the camera system we build. With this in place the player may pan and drag the view around to inspect different buildings. To make focusing on buildings easier after clicking on a building and then pressing the F key on the keyboard the user can focus onto a building. A zoom in and out feature is also available for convenience.
+
+
+Logging system
+	Inside the game files the game creates a log text file each turn (month) with the correct date for that month. These logs detail everything that happened in the city during that turn. For example the projects started, repairs happening, buildings getting built, happiness and budget changes and event that month.

@@ -12,32 +12,19 @@
 }
 
 body {
-    background-color: #000000;
-}
-
-#particles-js {
-    position: fixed;
-    width: 100%;
+    background-color: black;
+    margin: 0px;
+    padding: 0;
     height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: #000; /* Or whatever background you want */
-}
-
-body {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-body, html {
-    padding: 0;
-    margin: 0;
-} 
-
-#container {
+.container {
+    height: 100%;
     overflow-wrap: break-word;
     display: flex;
     flex-direction: column;
@@ -51,6 +38,31 @@ body, html {
     margin: 30px;
     border: 5px solid var(--light-blue);
 }
+
+/* .content{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    height: 100%;
+} */
+
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #000; /* Or whatever background you want */
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+} 
+
 
 #team_container {
     width: 60%;
