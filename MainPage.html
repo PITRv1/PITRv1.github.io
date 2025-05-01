@@ -219,11 +219,22 @@
                         </div>
 
                         <div class="window">
-                            <div class="titlebar access">
-                                <p>Épületek.accdb</p>
+                            <div id="titlebar">
+                                <p>File viewer</p>
                                 <p>X</p>
                             </div>
-                            <div class="window-content">
+                    
+                            <div id="file-chooser">
+                                <button onclick="open_file('buildings.accdb')"><img src="Assets/Images/File chooser/file_icon_red.png"><p>Épületek</p></button>
+                                <button onclick="open_file('residents.accdb')"><img src="Assets/Images/File chooser/file_icon_red.png"><p>Lakosok</p></button>
+                                <button onclick="open_file('projects.accdb')"><img src="Assets/Images/File chooser/file_icon_red.png"><p>Projektek</p></button>
+                                <button onclick="open_file('switchtable.accdb')"><img src="Assets/Images/File chooser/file_icon_red.png"><p>Kapcsolótábla</p></button>
+                                <button onclick="open_file('buildings-stat.xlsx')"><img src="Assets/Images/File chooser/file_icon_green.png"><p>Épületek aránya</p></button>
+                                <button onclick="open_file('residents-stat.xlsx')"><img src="Assets/Images/File chooser/file_icon_green.png"><p>Korcsoportok megoszlása</p></button>
+                                <button onclick="open_file('projects-stat.xlsx')"><img src="Assets/Images/File chooser/file_icon_green.png"><p>Projektek statisztikája</p></button>
+                            </div>
+                    
+                            <div class="window-content" id="buildings" style="display: none;">
                                 <table>
                                     <thead>
                                         <th>Azonosító</th>
@@ -409,197 +420,417 @@
                                     </tr>                                      
                                 </table>
                             </div>
-                        </div>
-                        <div class="window">
-                            <div class="titlebar access">
-                                <p>Épületek.accdb</p>
-                                <p>X</p>
-                            </div>
-                            <div class="window-content">
+                    
+                            <div class="window-content" id="residents" style="display: none;">
                                 <table>
                                     <thead>
                                         <th>Azonosító</th>
                                         <th>Név</th>
-                                        <th>Típus</th>
-                                        <th>Építés éve</th>
-                                        <th>Hasznos terület</th>
+                                        <th>Születési év</th>
+                                        <th>Foglalkozás</th>
+                                        <th>Lakóhely</th>
                                     </thead>
                                     <tr>
                                         <td>1</td>
-                                        <td>Napfény Lakópark</td>
-                                        <td>lakóház</td>
-                                        <td>1990</td>
-                                        <td>120</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Dombalja Apartmanház</td>
-                                        <td>lakóház</td>
+                                        <td>Nagy Anna</td>
+                                        <td>2023</td>
+                                        <td>nincs</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>Tóth László</td>
+                                        <td>2015</td>
+                                        <td>tanuló</td>
+                                        <td>3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>Szabó Eszter</td>
+                                        <td>2010</td>
+                                        <td>tanuló</td>
+                                        <td>4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>Varga Zoltán</td>
+                                        <td>2005</td>
+                                        <td>programozó</td>
+                                        <td>5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>6</td>
+                                        <td>Farkas Réka</td>
+                                        <td>1998</td>
+                                        <td>tanár</td>
+                                        <td>6</td>
+                                      </tr>
+                                      <tr>
+                                        <td>7</td>
+                                        <td>Kiss Tamás</td>
                                         <td>1985</td>
-                                        <td>150</td>
-                                    </tr>
+                                        <td>építész</td>
+                                        <td>7</td>
+                                      </tr>
+                                      <tr>
+                                        <td>8</td>
+                                        <td>Balogh Dóra</td>
+                                        <td>1972</td>
+                                        <td>orvos</td>
+                                        <td>8</td>
+                                      </tr>
+                                      <tr>
+                                        <td>9</td>
+                                        <td>Oláh Bence</td>
+                                        <td>2016</td>
+                                        <td>tanuló</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>10</td>
+                                        <td>Molnár Zsófia</td>
+                                        <td>1990</td>
+                                        <td>bolti eladó</td>
+                                        <td>2</td>
+                                      </tr>
+                                      <tr>
+                                        <td>11</td>
+                                        <td>Nagy Anna</td>
+                                        <td>2013</td>
+                                        <td>tanuló</td>
+                                        <td>3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>12</td>
+                                        <td>Kovács Péter</td>
+                                        <td>2008</td>
+                                        <td>tanuló</td>
+                                        <td>4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>13</td>
+                                        <td>Tóth László</td>
+                                        <td>1995</td>
+                                        <td>sofőr</td>
+                                        <td>5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>14</td>
+                                        <td>Szabó Eszter</td>
+                                        <td>1980</td>
+                                        <td>mérnök</td>
+                                        <td>6</td>
+                                      </tr>
+                                      <tr>
+                                        <td>15</td>
+                                        <td>Varga Zoltán</td>
+                                        <td>2003</td>
+                                        <td>tanuló</td>
+                                        <td>7</td>
+                                      </tr>
+                                      <tr>
+                                        <td>16</td>
+                                        <td>Farkas Réka</td>
+                                        <td>2001</td>
+                                        <td>tanuló</td>
+                                        <td>8</td>
+                                      </tr>
+                                      <tr>
+                                        <td>17</td>
+                                        <td>Kiss Tamás</td>
+                                        <td>1993</td>
+                                        <td>építész</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>18</td>
+                                        <td>Balogh Dóra</td>
+                                        <td>1989</td>
+                                        <td>ápoló</td>
+                                        <td>2</td>
+                                      </tr>
+                                      <tr>
+                                        <td>19</td>
+                                        <td>Oláh Bence</td>
+                                        <td>2017</td>
+                                        <td>tanuló</td>
+                                        <td>3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>20</td>
+                                        <td>Molnár Zsófia</td>
+                                        <td>2012</td>
+                                        <td>tanuló</td>
+                                        <td>4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>21</td>
+                                        <td>Nagy Anna</td>
+                                        <td>1996</td>
+                                        <td>szakács</td>
+                                        <td>5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>22</td>
+                                        <td>Kovács Péter</td>
+                                        <td>2000</td>
+                                        <td>diák</td>
+                                        <td>6</td>
+                                      </tr>
+                                      <tr>
+                                        <td>23</td>
+                                        <td>Tóth László</td>
+                                        <td>1982</td>
+                                        <td>jogász</td>
+                                        <td>7</td>
+                                      </tr>
+                                      <tr>
+                                        <td>24</td>
+                                        <td>Szabó Eszter</td>
+                                        <td>1975</td>
+                                        <td>orvos</td>
+                                        <td>8</td>
+                                      </tr>
+                                      <tr>
+                                        <td>25</td>
+                                        <td>Varga Zoltán</td>
+                                        <td>2014</td>
+                                        <td>tanuló</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>26</td>
+                                        <td>Farkas Réka</td>
+                                        <td>2006</td>
+                                        <td>tanuló</td>
+                                        <td>2</td>
+                                      </tr>
+                                      <tr>
+                                        <td>27</td>
+                                        <td>Kiss Tamás</td>
+                                        <td>1999</td>
+                                        <td>pincér</td>
+                                        <td>3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>28</td>
+                                        <td>Balogh Dóra</td>
+                                        <td>1988</td>
+                                        <td>marketinges</td>
+                                        <td>4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>29</td>
+                                        <td>Oláh Bence</td>
+                                        <td>2011</td>
+                                        <td>tanuló</td>
+                                        <td>5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>30</td>
+                                        <td>Molnár Zsófia</td>
+                                        <td>2009</td>
+                                        <td>tanuló</td>
+                                        <td>6</td>
+                                      </tr>
+                                      <tr>
+                                        <td>31</td>
+                                        <td>Nagy Anna</td>
+                                        <td>1992</td>
+                                        <td>bolti eladó</td>
+                                        <td>7</td>
+                                      </tr>
+                                      <tr>
+                                        <td>32</td>
+                                        <td>Kovács Péter</td>
+                                        <td>1984</td>
+                                        <td>sofőr</td>
+                                        <td>8</td>
+                                      </tr>
+                                      <tr>
+                                        <td>33</td>
+                                        <td>Tóth László</td>
+                                        <td>2007</td>
+                                        <td>tanuló</td>
+                                        <td>1</td>
+                                      </tr>
+                                      <tr>
+                                        <td>35</td>
+                                        <td>Varga Zoltán</td>
+                                        <td>2004</td>
+                                        <td>tanuló</td>
+                                        <td>3</td>
+                                      </tr>
+                                      <tr>
+                                        <td>36</td>
+                                        <td>Farkas Réka</td>
+                                        <td>1997</td>
+                                        <td>könyvelő</td>
+                                        <td>4</td>
+                                      </tr>
+                                      <tr>
+                                        <td>37</td>
+                                        <td>Kiss Tamás</td>
+                                        <td>1981</td>
+                                        <td>építész</td>
+                                        <td>5</td>
+                                      </tr>
+                                      <tr>
+                                        <td>38</td>
+                                        <td>Balogh Dóra</td>
+                                        <td>1979</td>
+                                        <td>üzletember</td>
+                                        <td>6</td>
+                                      </tr>
+                                      <tr>
+                                        <td>39</td>
+                                        <td>Oláh Bence</td>
+                                        <td>2010</td>
+                                        <td>tanuló</td>
+                                        <td>7</td>
+                                      </tr>
+                                      <tr>
+                                        <td>40</td>
+                                        <td>Molnár Zsófia</td>
+                                        <td>2002</td>
+                                        <td>diák</td>
+                                        <td>8</td>
+                                      </tr>
+                                      
+                                </table>
+                            </div>
+                    
+                            <div class="window-content" id="projects" style="display: none;">
+                                <table>
+                                    <thead>
+                                        <th>Azonosító</th>
+                                        <th>Név</th>
+                                        <th>Költségvetés</th>
+                                        <th>Kezdés dátuma</th>
+                                        <th>Tervezett befejezés dátuma</th>
+                                    </thead>
                                     <tr>
                                         <td>3</td>
-                                        <td>Béke Tér 12</td>
-                                        <td>lakóház</td>
-                                        <td>2000</td>
-                                        <td>180</td>
-                                    </tr>
-                                    <tr>
+                                        <td>Vízvezeték rendszer fejlesztés</td>
+                                        <td>1000000</td>
+                                        <td>19-Mar-25</td>
+                                        <td>19-Mar-26</td>
+                                      </tr>
+                                      <tr>
                                         <td>4</td>
-                                        <td>Tölgyfa Rezidencia</td>
-                                        <td>lakóház</td>
-                                        <td>2015</td>
-                                        <td>130</td>
-                                    </tr>
-                                    <tr>
+                                        <td>Iskola Felújítás program</td>
+                                        <td>2345670</td>
+                                        <td>01-Oct-25</td>
+                                        <td>01-Oct-26</td>
+                                      </tr>
+                                      <tr>
                                         <td>5</td>
-                                        <td>Rózsakert Társasház</td>
-                                        <td>lakóház</td>
-                                        <td>1998</td>
-                                        <td>160</td>
-                                    </tr>
-                                    <tr>
+                                        <td>Városi faültető projekt</td>
+                                        <td>576400</td>
+                                        <td>05-May-25</td>
+                                        <td>21-Aug-25</td>
+                                      </tr>
+                                      <tr>
                                         <td>6</td>
-                                        <td>Aranypart Villa</td>
-                                        <td>lakóház</td>
-                                        <td>1975</td>
-                                        <td>140</td>
-                                    </tr>
-                                    <tr>
+                                        <td>Csatornahálózat korszerűsítése</td>
+                                        <td>15000000</td>
+                                        <td>01-May-25</td>
+                                        <td>30-May-25</td>
+                                      </tr>
+                                      <tr>
                                         <td>7</td>
-                                        <td>Parkview Lakóház</td>
-                                        <td>lakóház</td>
-                                        <td>2005</td>
-                                        <td>110</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Harmónia Otthon</td>
-                                        <td>lakóház</td>
-                                        <td>2010</td>
-                                        <td>170</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>Ady Endre Gimnázium</td>
-                                        <td>iskola</td>
-                                        <td>1980</td>
-                                        <td>400</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Városi Általános Iskola</td>
-                                        <td>iskola</td>
-                                        <td>1995</td>
-                                        <td>420</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>Központi Kórház</td>
-                                        <td>kórház</td>
-                                        <td>1970</td>
-                                        <td>500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>Rózsa Utcai Egészségház</td>
-                                        <td>kórház</td>
-                                        <td>2003</td>
-                                        <td>480</td>
-                                    </tr>
-                                    <tr>
-                                        <td>13</td>
-                                        <td>Pláza Bevásárlóközpont</td>
-                                        <td>üzlet</td>
-                                        <td>1992</td>
-                                        <td>250</td>
-                                    </tr>
-                                    <tr>
-                                        <td>14</td>
-                                        <td>Belvárosi Szupermarket</td>
-                                        <td>üzlet</td>
-                                        <td>2007</td>
-                                        <td>230</td>
-                                    </tr>
-                                    <tr>
-                                        <td>15</td>
-                                        <td>Acélgyár</td>
-                                        <td>gyár</td>
-                                        <td>1965</td>
-                                        <td>600</td>
-                                    </tr>
-                                    <tr>
-                                        <td>16</td>
-                                        <td>Városi Autógyár</td>
-                                        <td>gyár</td>
-                                        <td>1999</td>
-                                        <td>550</td>
-                                    </tr>
-                                    <tr>
-                                        <td>17</td>
-                                        <td>Központi Buszpályaudvar</td>
-                                        <td>közlekedési csomópont</td>
-                                        <td>2012</td>
-                                        <td>700</td>
-                                    </tr>
-                                    <tr>
-                                        <td>18</td>
-                                        <td>Fővárosi Rendőrkapitányság</td>
-                                        <td>rendőrség</td>
-                                        <td>1988</td>
-                                        <td>300</td>
-                                    </tr>
-                                    <tr>
-                                        <td>19</td>
-                                        <td>Központi Tűzoltóság</td>
-                                        <td>tűzoltóság</td>
-                                        <td>1993</td>
-                                        <td>310</td>
-                                    </tr>
-                                    <tr>
-                                        <td>20</td>
-                                        <td>Művelődési Központ</td>
-                                        <td>kulturális</td>
-                                        <td>2011</td>
-                                        <td>450</td>
-                                    </tr>
-                                    <tr>
-                                        <td>21</td>
-                                        <td>Városháza</td>
-                                        <td>adminisztráció</td>
-                                        <td>1955</td>
-                                        <td>350</td>
-                                    </tr>
-                                    <tr>
-                                        <td>22</td>
-                                        <td>Galaxy Bevásárlóközpont</td>
-                                        <td>kereskedelem</td>
-                                        <td>2015</td>
-                                        <td>500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>23</td>
-                                        <td>Napsugár Játszótér</td>
-                                        <td>szórakozás</td>
-                                        <td>2008</td>
-                                        <td>100</td>
-                                    </tr>
-                                    <tr>
-                                        <td>24</td>
-                                        <td>Aréna Sportkomplexum</td>
-                                        <td>szórakozás</td>
-                                        <td>2016</td>
-                                        <td>450</td>
-                                    </tr>
-                                    <tr>
-                                        <td>25</td>
-                                        <td>Grand Cinema</td>
-                                        <td>szórakozás</td>
-                                        <td>2000</td>
-                                        <td>320</td>
-                                    </tr>                                      
+                                        <td>Tömegközlekedés fejlesztése</td>
+                                        <td>80000000</td>
+                                        <td>01-May-25</td>
+                                        <td>30-Aug-25</td>
+                                      </tr>
+                                      
                                 </table>
+                            </div>
+                    
+                            <div class="window-content" id="switchtable" style="display: none;">
+                                <table>
+                                    <thead>
+                                        <th>Azonosító</th>
+                                        <th>Projekt azonosító</th>
+                                        <th>Épület azonosító</th>
+                                    </thead>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>3</td>
+                                        <td>9</td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>10</td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>24</td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>9</td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>4</td>
+                                        <td>10</td>
+                                      </tr>
+                                      <tr>
+                                        <td>6</td>
+                                        <td>5</td>
+                                        <td>23</td>
+                                      </tr>
+                                      <tr>
+                                        <td>7</td>
+                                        <td>5</td>
+                                        <td>24</td>
+                                      </tr>
+                                      <tr>
+                                        <td>8</td>
+                                        <td>6</td>
+                                        <td>20</td>
+                                      </tr>
+                                      <tr>
+                                        <td>9</td>
+                                        <td>7</td>
+                                        <td>12</td>
+                                      </tr>
+                                      <tr>
+                                        <td>10</td>
+                                        <td>7</td>
+                                        <td>13</td>
+                                      </tr>
+                                      <tr>
+                                        <td>11</td>
+                                        <td>7</td>
+                                        <td>14</td>
+                                      </tr>
+                                      <tr>
+                                        <td>12</td>
+                                        <td>7</td>
+                                        <td>17</td>
+                                      </tr>                  
+                                </table>
+                            </div>
+                    
+                            <div class="window-content" id="buildings-stat" style="display: none;">
+                                <img src="Assets/Images/Stat/épületek_megoszlása1.png">
+                                <img src="Assets/Images/Stat/épületek_megoszlása2.png">
+                            </div>
+                    
+                            <div class="window-content" id="residents-stat" style="display: none;">
+                                <img src="Assets/Images/Stat/korcsoportok1.png">
+                                <img src="Assets/Images/Stat/korcsoportok2.png">
+
+                            </div>
+                    
+                            <div class="window-content" id="projects-stat" style="display: none;">
+                                <img src="Assets/Images/Stat/projekt_költségek.png">
                             </div>
                         </div>
                     </div>
@@ -639,5 +870,6 @@
 
    <script src="JS/mainPage.js"></script>
    <script src="JS/signiture.js"></script>
+   <script src="JS/window.js"></script>
 </body>
 </html>
