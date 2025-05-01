@@ -1,5 +1,6 @@
 const file_chooser = document.getElementById("file-chooser");
 const title_bar = document.getElementById("titlebar");
+const window_contents = document.getElementsByClassName("window-content");
 
 const colors = {
     "yellow":"rgb(165, 155, 10)",
@@ -8,6 +9,10 @@ const colors = {
 }
 
 let current_file = null
+
+for (let i=0; i < window_contents.length; i++) {
+    window_contents[i].innerHTML = "<button onclick='close_file()'>Back</button>"+window_contents[i].innerHTML;
+}
 
 function open_file(file_name) {
     let file = document.getElementById(file_name.split(".")[0]);
@@ -35,14 +40,3 @@ function close_file() {
         title_bar.style.backgroundColor = colors.yellow;
     }
 }
-
-let window_contents = document.getElementsByClassName("window-content");
-
-for (let i=0; i < window_contents.length; i++) {
-    window_contents[i].innerHTML = "<button onclick='close_file()'>Back</button>"+window_contents[i].innerHTML;
-}
-
-
-// window_contents.forEach(win => {
-//     win.innerHTML = "<button onclick='close_file()'>Back</button>"+file.innerHTML;
-// });
