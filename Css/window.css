@@ -1,0 +1,89 @@
+.window {
+    border: black 3px solid;
+    max-height: 600px;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.window button {
+    color: black;
+}
+
+#titlebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(165, 155, 10);
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.window-content {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+    box-sizing: border-box;
+}
+
+td {
+    padding: 10px;
+    padding-right: 20px;
+}
+
+th {
+    text-align: left;
+}
+
+td, th {    
+    min-width: 200px;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:hover {
+    background-color: gainsboro;
+}
+
+tr {
+    border: 2px solid gray;
+}
+
+thead {
+    background-color: gray;
+    color: white;
+}
+
+#file-chooser {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#file-chooser img {
+    height: 80px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#file-chooser p {
+    color: black;
+}
+
+#file-chooser button {
+    height: min-content;
+}
