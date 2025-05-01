@@ -293,7 +293,9 @@ font-weight: bold;
 }
 
 
-/* specifically for the game tab */
-.game-mechanics-content-section{
+.game-mechanics-content-section, .systems-content-section{
     margin: 3rem 0 3rem 0;
 }
+
+/* specifically for the game tab */
+

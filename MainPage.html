@@ -117,7 +117,7 @@
                             <div class="game-mechanics-content-section">
                                 <h2>Building construction</h2>
                                 <p>Buildings can be constructed on empty plots. <br>
-                                The player can construct 3 different types of buildings >> </p>
+                                The player can construct 3 different types of buildings:</p>
                                 <ul>
                                     <li>Flat</li>
                                     <li>Hospital</li>
@@ -157,7 +157,7 @@
                                 </p>
                                 <p>The five events are:</p>
                                 <ul>
-                                    <li>Fireee : multiple houses are damaged ( the index of the damaged houses is shown ) and the happiness falls by 15%</li>
+                                    <li>Fireee : multiple houses are damaged (the index of the damaged houses is shown) and the happiness falls by 15%</li>
                                     <li>Water pipe disaster : the happiness of the people falls by 5% and player has to use 10000$ of budget to fix the issue</li>
                                     <li>City wide famine : the populations happiness decreeses by 15%.</li>
                                     <li>Extra government funding : the city gains 100.000$ extra budget</li>
@@ -192,7 +192,75 @@
                         </div>
                     </div>
 
-                    <div class="changing development" id="development-content" style="background-color: red;">
+
+                    <div class="changing systems" id="systems-content">
+                        <div class="section-title">
+                            <h1>Systems</h1>
+                        </div>
+    
+                        <div class="section-content">
+                            <p>The systems in the game work to make the game feature complete and whole.</p>
+                            <p>There are 5 main systems in Please Hold >></p>
+                            <ul>
+                                <li>Projects</li>
+                                <li>Save and Load system</li>
+                                <li>Player Preferences</li>
+                                <li>Camera system</li>
+                                <li>Logging system</li>
+                            </ul>
+
+                            <div class="systems-content-section">
+                                <h2>Projects</h2>
+                                <p>Projects are the main driving system behind the game. They can include multiple buildings at once. All of the have a name, a type, and a cost as well as a time to complete (months). This system is utilized in multiple areas such as the building and repair game-mechanics.
+                                </p>
+                            </div>
+
+                            <hr>
+
+                            <div class="systems-content-section">
+                                <h2>Save and Load system</h2>
+                                <p>The game saves the current state of the simulation each turn into a .csv file from which the player can continue a simulation they started earlier without having to restart the whole process. </p>
+                                
+                                <p>The load system is able to populate the simulation data such as buildings, their types and specifications. If the player has already started a simulation and the save system has created a save file, through the load system we can enter back into an already started simulation loading the relevant date happiness budget and buildings.</p>
+
+                                <p>A separate load system was created for the players preferences and settings.</p>
+                            </div>
+
+                            <hr>
+
+                            <div class="systems-content-section">
+                                <h2>Player Preferences</h2>
+                                <p>The user may tailor their experience to themselves by changing the settings of the game the settings include the following:</p>
+                                <ul>
+                                    <li>Music volume</li>
+                                    <li>Camera movement sensitivity</li>
+                                    <li>Camera orbit sensitivity</li>
+                                    <li>Camera zoom sensitivity</li>
+                                </ul>
+
+                                <p>This menu can be reached both through the main menu and the pause menu inside the simulation.</p>
+                            </div>
+
+                            <hr>
+
+                            <div class="systems-content-section">
+                                <h2>Camera system</h2>
+                                <p>Inside the situation the user can properly look around using the camera system we build. With this in place the player may pan and drag the view around to inspect different buildings. To make focusing on buildings easier after clicking on a building and then pressing the F key on the keyboard the user can focus onto a building. A zoom in and out feature is also available for convenience.</p>
+                            </div>
+
+                            <hr>
+
+                            <div class="systems-content-section">
+                                <h2>Logging system</h2>
+                                <p>Inside the game files the game creates a log text file each turn (month) with the correct date for that month. These logs detail everything that happened in the city during that turn. For example the projects started, repairs happening, buildings getting built, happiness and budget changes and event that month.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="changing development" id="development-content">
                         <div class="section-title">
                             <h1>Development</h1>
                         </div>
@@ -206,7 +274,7 @@
                     </div>
 
 
-                    <div class="changing datathrough" id="data-content" style="background-color: red;">
+                    <div class="changing data" id="data-content" style="background-color: red;">
                         <div class="section-title">
                             <h1>Data</h1>
                         </div>
@@ -836,29 +904,14 @@
                     </div>
 
 
-                    <div class="changing story" id="systems-content" style="background-color: red;">
-                        <div class="section-title">
-                            <h1>Systems</h1>
-                        </div>
-    
-                        <div class="section-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                            <img src="Assets/Images/GameLogoForWeb.png">
-                        </div>
-                    </div>
-
                     <div class="changing gallery" id="gallery-content" style="background-color: red;">
                         <div class="section-title">
                             <h1>Gallery</h1>
                         </div>
     
                         <div class="section-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                            <img src="Assets/Images/GameLogoForWeb.png">
+                            <p>Here are some pictures from the game both while it was developed and from it`s complete state >></p>
+                            
                         </div>
                     </div>
 
