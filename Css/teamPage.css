@@ -1,12 +1,11 @@
 body, html {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 } 
 
 body {
     background-color: black;
-    height: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,11 +16,11 @@ body {
     height: 100%;
     padding: 30px;
     gap: 70px;
-    max-width: 70%;
+    max-width: 60%;
     background-color: rgba(4, 46, 59, 0.678);
     border-radius: 10px;
-    margin: 30px;
     border: 5px solid var(--light-blue);
+    box-sizing: border-box;
 }
 
 .content {
@@ -31,6 +30,8 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 #particles-js {
@@ -44,7 +45,6 @@ body {
 }
 
 #team_container {
-    width: 60%;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -61,9 +61,10 @@ body {
     border-radius: 15px;
     rotate: -7deg;
     float: left;
-    margin-right: 20px;
-    margin-left: 1%;
-    width: 30%;
+    margin-right: 30px;
+    margin-left: 20px;
+    aspect-ratio: 0.6;
+    width: 20%;
 }
 
 .content img {
@@ -84,15 +85,20 @@ body {
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    overflow-wrap: anywhere;
 }
 
 #project_container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
     gap: 20px;
     max-width: 100%;
     overflow-y: hidden;
     overflow-x: auto;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -150,9 +156,23 @@ h1 {
 }
 
 #email {
-    color: var(--light-blue);     
+    color: var(--light-blue);
 }
 
 ul {
-    padding-left: 35%;
+    padding-left: 28%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        max-width: 75%;
+        text-align: center;
+    }
+    #member_container {
+        width: 100%;
+    }
+    .member_icon {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }

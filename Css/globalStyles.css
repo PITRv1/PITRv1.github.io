@@ -67,3 +67,15 @@
 .nav-item-selected{
     background-color: #36506fb5;
 }
+
+@media only screen and (max-width: 1000px) {
+    .nav-btn {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .nav-btn > img {
+        height: 70%;
+    }
+}
