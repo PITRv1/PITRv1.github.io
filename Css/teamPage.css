@@ -1,11 +1,3 @@
-* {
-    font-family: "PixelFont";
-    color: white;
-    --light-blue: #77b2fc;
-    --dark-blue: #064796;
-    --black: #000000;
-}
-
 body, html {
     padding: 0;
     margin: 0;
@@ -145,7 +137,7 @@ body {
     background-color: var(--light-blue);
 }
 
-p {
+p, ul {
     text-align: justify;
     filter: drop-shadow(0 0 5px #ffffff);
     line-height: 25px;
@@ -159,4 +151,8 @@ h1 {
 
 #email {
     color: var(--light-blue);     
+}
+
+ul {
+    padding-left: 35%;
 }

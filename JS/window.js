@@ -1,6 +1,7 @@
 const file_chooser = document.getElementById("file-chooser");
-const title_bar = document.getElementById("titlebar");
+const titlebar = document.getElementById("titlebar");
 const window_contents = document.getElementsByClassName("window-content");
+const titlebar_title = document.getElementById("titlebar-title");
 
 const colors = {
     "yellow":"rgb(165, 155, 10)",
@@ -24,10 +25,11 @@ function open_file(file_name) {
         current_file = file
 
         if (file_name.includes(".accdb")) {
-            title_bar.style.backgroundColor = colors.red;
+            titlebar.style.backgroundColor = colors.red;
         } else {
-            title_bar.style.backgroundColor = colors.green;
+            titlebar.style.backgroundColor = colors.green;
         }
+        titlebar_title.textContent = file_name;
     }
 }
 
@@ -37,6 +39,7 @@ function close_file() {
         file_chooser.style.display = "block";
 
         current_file = null;
-        title_bar.style.backgroundColor = colors.yellow;
+        titlebar.style.backgroundColor = colors.yellow;
+        titlebar_title.textContent = "File viewer"
     }
 }
