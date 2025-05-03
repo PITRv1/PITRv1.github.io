@@ -16,6 +16,10 @@
 
    <div class="container">
        <div class="nav-bar">
+            <div class="music-mute-btn" onclick="switchMusic()">
+                <img id="volume-icon" src="Assets/SVG/volume_up.svg">
+            </div>
+
             <div class="nav-item">
                 <a href="TeamPage.html">
                 <button class="nav-btn">
@@ -69,6 +73,10 @@
                         <p>
                             In the game you play as an office worker. While working they call the customer-service of their company but get put on hold. While on hold they get bored and eventually they start playing on their phone. The game they play is a citybuilder game. This is where the real game begins.
                         </p>
+                        <div class="im-centering-it-im-centering-it">
+                            <img class="intro-gif"  src="Assets/Images/intro.gif">
+                        </div>
+
                     </div>
                 </div>
 
@@ -285,7 +293,7 @@
                                 <div class="development-content-section">
                                     <h1>Work division</h1>
                                     <div>
-                                        <h2>Peter</h2>
+                                        <h2>Péter</h2>
                                         <p>Peter worked on the visuals of the game. This includes making the 3D models and texturing them then importing all the models and assets into Unity.</p>
                                         <p>The UI was also produced by him along with any shaders the final game has.</p>
                                         <p>Besides visual appearance Peter also helped out with the programming of the game logic.</p>
@@ -1001,13 +1009,21 @@
                                     <div class="im-centering-it-im-centering-it">
                                         <div class="carousel">
                                             <div class="carousel-track">
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/behindSceneFinal.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/accessDbBts.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/blenderBtsHospitalMatcap.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/blenderBtsHospital.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/blenderBtsLiveBuilding.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/blenderBtsSchool.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/cameraSystem.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/fullGameAbove.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/fullGameGameBoard.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/gameFullscreen.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/inGameHouse.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/sim_end.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/buildingConstruction.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/mainMenuOptions.png" onclick="openImage(this.src)"></div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -1023,13 +1039,15 @@
                                         <div class="carousel">
                                             <div class="carousel-track">
                                                 <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
-                                                <div class="carousel-item"><img src="Assets/Images/GameLogoForWeb.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/randomEvents2.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/gitdesktopBTS.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/citizenDevelopment.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/mainMenuOptions.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/buildingInstpect.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/excelBts.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/mainSceneInDev.png" onclick="openImage(this.src)"></div>
+                                                <div class="carousel-item"><img src="Assets/Images/MainPage/optionsInGame.png" onclick="openImage(this.src)"></div>
+                                                
                                             </div>
                                         </div>
                                     </div>

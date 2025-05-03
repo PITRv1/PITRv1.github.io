@@ -55,3 +55,18 @@ function openImage(src) {
 function closeImage() {
   document.getElementById('fullscreen-viewer').classList.add('hidden-wo-display');
 }
+
+
+const img = document.getElementById("volume-icon");
+let musicOn = true
+function switchMusic(){
+  if (musicOn === true){
+    musicOn = false
+    img.src = "Assets/SVG/volume_off.svg"
+  }
+  else {
+    musicOn = true
+    img.src = "Assets/SVG/volume_up.svg"
+
+  }
+}
