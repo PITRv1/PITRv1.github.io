@@ -6,6 +6,8 @@ const start_button = document.getElementById("start-btn")
 const gradient_overlay = document.getElementById("gradient-overlay")
 const main_content = document.getElementById("main-content")
 
+const audio = new Audio("Assets/Musics/PleaseHold_Theme_loop.mp3");
+
 //Eventlisterenrs
 start_button.addEventListener("click", showMainPage);
 
@@ -58,15 +60,21 @@ function closeImage() {
 
 
 const img = document.getElementById("volume-icon");
-let musicOn = true
+let musicOn = false
+
 function switchMusic(){
   if (musicOn === true){
-    musicOn = false
-    img.src = "Assets/SVG/volume_off.svg"
+    musicOn = false;
+    img.src = "Assets/SVG/volume_off.svg";
+    audio.pause();
   }
   else {
-    musicOn = true
-    img.src = "Assets/SVG/volume_up.svg"
-
+    musicOn = true;
+    img.src = "Assets/SVG/volume_up.svg";
+    audio.play();
   }
 }
+
+audio.onplay(() => {
+  audio.loop == true;
+});
