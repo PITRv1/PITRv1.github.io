@@ -393,6 +393,7 @@ font-weight: bold;
     height: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     /* justify-items: stretch; */
     gap: 1vw;
 }
