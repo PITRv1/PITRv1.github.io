@@ -29,6 +29,10 @@ body::-webkit-scrollbar {
 }
 
 
+.flex-div{
+    display: flex;
+}
+
 .container {
     height: 100%;
     background-color: black;
@@ -381,6 +385,23 @@ font-weight: bold;
     color: var(--light-blue);
 }
 
+
+/* development tab only */
+
+.logo-holder{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* justify-items: stretch; */
+    gap: 1vw;
+}
+
+.logo{
+    aspect-ratio: 1/1;
+    height: 150px;
+    width: auto;
+}
 
 
 /* tab heights */
