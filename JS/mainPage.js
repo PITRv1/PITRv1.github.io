@@ -7,6 +7,7 @@ const gradient_overlay = document.getElementById("gradient-overlay")
 const main_content = document.getElementById("main-content")
 
 const audio = new Audio("Assets/Musics/PleaseHold_Theme_loop.mp3");
+audio.loop = true;
 
 //Eventlisterenrs
 start_button.addEventListener("click", showMainPage);
@@ -74,7 +75,3 @@ function switchMusic(){
     audio.play();
   }
 }
-
-audio.onplay(() => {
-  audio.loop == true;
-});
